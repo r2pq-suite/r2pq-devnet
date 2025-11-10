@@ -17,3 +17,8 @@ R2PQ Devnet is a standalone environment used for testing, validation, and local 
 ## Status
 ✅ Initialized  
 🚧 Devnet node not yet added
+
+# Legal
+R2PQ is open-source under the Apache-2.0 License.  
+R2PQ™ is a trademark of Eric James Newman.  
+See `LICENSE`, `NOTICE`, and `TRADEMARKS.md` for details.
