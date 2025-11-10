@@ -1,24 +1,23 @@
-README.md
+r2pq-devnet
 
-# r2pq-devnet
+A tiny **mock R2PQ network** for local development and testing.  
+Zero external deps, safe to embed in CI. Exposes a minimal JSON/HTTP API.
 
-R2PQ Devnet is a standalone environment used for testing, validation, and local development of PQ-enabled transactions, APIs, and runtimes.
+## Endpoints
 
-## Purpose
-- Spin up a local PQ-enabled chain/simulator  
-- Test r2pq-sdk + r2pq-cli + r2pq-precompiles together  
-- Validate block/tx/receipt schemas  
-- Measure performance and debug issues early  
+- `GET /health` → `{ ok, ts, service }`
+- `GET /version` → `{ version }`
+- `GET /account/{addr}` → `{ address, account:{ balance, nonce } }`
+- `POST /tx` with JSON:
+  ```json
+  {
+    "from": "r2pq1faucetxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "to":   "r2pq1receiverxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "amount": 100,
+    "nonce": 1,
+    "sig": ""
+  }
 
-## Structure
+→ { "txHash": "0x...", "status": "accepted" }
 
-/node             # Devnet node implementation /config           # Chain config, PQ params /scripts          # Startup scripts, automation /tests            # Integration tests
-
-## Status
-✅ Initialized  
-🚧 Devnet node not yet added
-
-# Legal
-R2PQ is open-source under the Apache-2.0 License.  
-R2PQ™ is a trademark of Eric James Newman.  
-See `LICENSE`, `NOTICE`, and `TRADEMARKS.md` for details.
+> NOTE: Nonce must be sender_nonce + 1. Balances are tracked in-memory only.
