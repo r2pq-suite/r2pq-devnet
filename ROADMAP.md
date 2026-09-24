@@ -1,3 +1,5 @@
+> **Historical 2025 planning — not the current plan of record.** The original roadmap below records intentions, not verified completion. Unmet milestones must not be presented as current capability. Current R2PQ public research scope and evidence boundaries are documented at [r2pq.dev](https://r2pq.dev).
+
 # R2PQ Roadmap
 
 ## Q1 2025

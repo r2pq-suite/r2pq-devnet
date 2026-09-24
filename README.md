@@ -1,3 +1,12 @@
+> **Historical 2025 R2PQ prototype lineage.** This repository preserves
+> earlier exploratory work. It does not represent the architecture or
+> capabilities of the current R2PQ cryptographic-assessment research system.
+> Documentation below records historical implementation, limitations,
+> and intentions; planned features must not be treated as delivered.
+> Current public scope and evidence boundaries: [r2pq.dev](https://r2pq.dev).
+
+## Historical prototype documentation — 2025
+
 r2pq-devnet
 
 A tiny **mock R2PQ network** for local development and testing.  
